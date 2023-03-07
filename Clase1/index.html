@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>La muerte del Guasón</title>
+    <meta name="description"
+        content="Ejercicio Nº1 del Curso de JavaScript/React JS: práctica de manejo de eventos con funciones.">
+    <meta name="author" content="Gabriel Pescio">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div id="guason">
+            <p id="cartucho"><strong>¡El Guasón ha muerto!</strong> Revisa su cadáver para encontrar de
+                dónde proviene la risa.</p>
+
+            <div id="area-cercana">
+                <div id="bolsa">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <audio hidden src="./sound/risaGuason.mp3" id="risa" type="audio/mpeg" loop></audio>
+    <audio hidden src="./sound/click.mp3" id="click" type="audio/mpeg"></audio>
+    <audio hidden src="./sound/bocina.mp3" id="bocina" type="audio/mpeg"></audio>
+    <audio hidden src="./sound/botonExito.mp3" id="sonido_exito" type="audio/mpeg"></audio>
+    <script src="./js/risa.js"></script>
+</body>
+
+</html>

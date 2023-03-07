@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: grey;
+    background: radial-gradient(circle, grey 40%, dimgrey 70%, black 100%);
+}
+
+#cartucho {
+    font-family: 'Bradley Hand', cursive;
+    font-variant: small-caps;
+    font-size: .8rem;
+    text-align: center;
+    background-color: yellow;
+    border: 2px solid black;
+    padding: 1% 3px;
+    margin-top: -7%;
+    box-shadow: 2px 2px 4px darkslategrey;
+    opacity: 100;
+    transition: opacity 1.5s linear .5s;
+}
+
+#cartucho.desvanecer {
+    opacity: 0;
+    transition: opacity 4.5s linear 7.5s;
+}
+
+#cartucho:hover {
+    opacity: 0;
+}
+
+#guason {
+    /* estilo */
+    border-radius: 50%;
+    min-width: 40vw;
+    max-width: 80vw;
+    height: 80vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../img/Joker01.png);
+}
+
+#area-cercana {
+    border-radius: 50%;
+    width: 30vh;
+    margin: 1vh 33%;
+    /*border: 2px solid red;*/
+}
+
+.bolsa_encontrada {
+    background-image: url(../img/bolsa2.png);
+}
+
+#bolsa {
+    margin: 50% auto;
+    width: 25%;
+    height: 11vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    /*border: 2px solid red;*/
+}
+
+@media only screen and (orientation : portrait) and (max-device-width : 1024px) {
+    #cartucho {
+        font-size: medium;
+    }
+
+    #area-cercana {
+        width: 26vh;
+        margin: 1vh auto;
+    }
+
+}

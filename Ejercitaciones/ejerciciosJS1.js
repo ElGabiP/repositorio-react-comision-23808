@@ -24,12 +24,12 @@ const nuevaResta = 10 - 5 === 5;
 console.log(nuevaResta);
 
 // Resuelve el siguiente problema matemático:
-const nuevaMultiplicacion = null * 4 === 40;
-console.log(nuevaResta);
+const nuevaMultiplicacion = 10 * 4 === 40;
+console.log(nuevaMultiplicacion);
 
 // Resuelve el siguiente problema matemático:
 const nuevoModulo = 21 % 5 === 1;
-console.log(nuevaResta);
+console.log(nuevoModulo);
 
 
 function devolverString(str) {
@@ -81,7 +81,13 @@ function sonIguales(x, y) {
   // Devuelve "true" si "x" e "y" son iguales
   // De lo contrario, devuelve "false"
   // Tu código:utilizar if y else
-  return x === y;
+if (x === y){
+  return true;
+} else {
+  return false;
+}
+
+  /*return x === y;*/
 
 }
 console.log(sonIguales(4, 7));
@@ -97,12 +103,13 @@ function tienenMismaLongitud(str1, str2) {
 }
 console.log(tienenMismaLongitud("12345", "rocas"));
 console.log(tienenMismaLongitud(12345, "rocas"));
+console.log(tienenMismaLongitud("roca", "rocas"));
 
 function menosQueNoventa(num) {
   // Devuelve "true" si el argumento de la función "num" es menor que noventa
   // De lo contrario, devuelve "false"
   // Tu código:
-  return num < 90
+  return num < 90;
 
 }
 console.log(menosQueNoventa(49));
@@ -114,7 +121,7 @@ function mayorQueCincuenta(num) {
   // Devuelve "true" si el argumento de la función "num" es mayor que cincuenta
   // De lo contrario, devuelve "false"
   // Tu código:
-  return num > 50
+  return num > 50;
 }
 console.log(mayorQueCincuenta(49));
 console.log(mayorQueCincuenta(49.9999));
@@ -124,7 +131,7 @@ console.log(mayorQueCincuenta(90));
 function obtenerResto(x, y) {
   // Obten el resto de la división de "x" entre "y"
   // Tu código:
-  return x % y
+  return x % y;
 }
 console.log(obtenerResto(45, 8));
 console.log(obtenerResto(4.2, 4.2));
@@ -134,19 +141,19 @@ function esPar(num) {
   // Devuelve "true" si "num" es par
   // De lo contrario, devuelve "false"
   // Tu código:
-  return num % 2 === 0
+  return num % 2 === 0;
 
 }
 console.log(esPar(45));
 console.log(esPar(4.2));
 console.log(esPar(-4));
-console.log(esPar(0))
+console.log(esPar(0));
 
 function esImpar(num) {
   // Devuelve "true" si "num" es impar
   // De lo contrario, devuelve "false"
   // Tu código:
-  return num % 2 !== 0
+  return num % 2 !== 0;
 
 }
 console.log(esImpar(45));
@@ -158,7 +165,7 @@ function elevarAlCuadrado(num) {
   // Devuelve el valor de "num" elevado al cuadrado
   // ojo: No es raiz cuadrada!
   // Tu código:
-  return Math.pow(num, 2)
+  return Math.pow(num, 2);
 
 }
 console.log(elevarAlCuadrado(3));
@@ -169,7 +176,7 @@ console.log(elevarAlCuadrado(0))
 function elevarAlCubo(num) {
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
-  return Math.pow(num, 3)
+  return Math.pow(num, 3);
 
 }
 console.log(elevarAlCubo(3));
@@ -266,16 +273,17 @@ console.log(obtenerSaludo(combinarNombres("Bruce", "Wayne")));
 function obtenerAreaRectangulo(alto, ancho) {
   // Retornar el area de un cuadrado teniendo su altura y ancho
   // Tu código:
-  return multiplica(alto, ancho)
+  return multiplica (Math.max(alto, 0), Math.max(ancho, 0));
 
 }
 console.log(obtenerAreaRectangulo(3, 4));
+console.log(obtenerAreaRectangulo(-3, 4));
 console.log(obtenerAreaRectangulo(elevarAlCubo(3), nuevoNum));
 
 function retornarPerimetro(lado) {
   //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
   //Escribe tu código aquí
-  return lado * 4
+  return Math.max(lado, 0) * 4;
 }
 console.log(retornarPerimetro(2))
 console.log(retornarPerimetro(3.49999999));
@@ -286,10 +294,12 @@ console.log(retornarPerimetro(0));
 function areaDelTriangulo(base, altura) {
   //Desarrolle una función que calcule el área de un triángulo.
   //Escribe tu código aquí
-  return obtenerAreaRectangulo(base, altura) / 2
+  return obtenerAreaRectangulo(Math.max(base, 0), Math.max(altura, 0) ) / 2;
 
 }
 console.log(areaDelTriangulo(3, 4));
+console.log(areaDelTriangulo(-3, 4));
+console.log(areaDelTriangulo(3, -4));
 console.log(areaDelTriangulo(3.4, 4.4));
 
 function deEuroAdolar(euro) {

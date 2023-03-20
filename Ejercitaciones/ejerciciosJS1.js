@@ -87,18 +87,20 @@ if (x === y){
   return false;
 }
 
-  /*return x === y;*/
+  /* Se puede resolver en una sola línea con:
+  return x === y;*/
 
 }
 console.log(sonIguales(4, 7));
 console.log(sonIguales(4.2, 4.2));
 console.log(sonIguales(-4, -4.0000));
+console.log(sonIguales(1, true));
 
 function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
   // Tu código:
-  return str1.length == str2.length
+  return String(str1).length == String(str2).length
 
 }
 console.log(tienenMismaLongitud("12345", "rocas"));
@@ -109,24 +111,26 @@ function menosQueNoventa(num) {
   // Devuelve "true" si el argumento de la función "num" es menor que noventa
   // De lo contrario, devuelve "false"
   // Tu código:
-  return num < 90;
+  return Number(num) < 90;
 
 }
 console.log(menosQueNoventa(49));
 console.log(menosQueNoventa(89.9999));
 console.log(menosQueNoventa(-92));
 console.log(menosQueNoventa(90));
+console.log(menosQueNoventa("9"));
 
 function mayorQueCincuenta(num) {
   // Devuelve "true" si el argumento de la función "num" es mayor que cincuenta
   // De lo contrario, devuelve "false"
   // Tu código:
-  return num > 50;
+  return Number(num) > 50;
 }
 console.log(mayorQueCincuenta(49));
 console.log(mayorQueCincuenta(49.9999));
 console.log(mayorQueCincuenta(-92));
 console.log(mayorQueCincuenta(90));
+console.log(mayorQueCincuenta("90"));
 
 function obtenerResto(x, y) {
   // Obten el resto de la división de "x" entre "y"
@@ -166,6 +170,7 @@ function elevarAlCuadrado(num) {
   // ojo: No es raiz cuadrada!
   // Tu código:
   return Math.pow(num, 2);
+  // Opcional: return num * num
 
 }
 console.log(elevarAlCuadrado(3));
@@ -177,12 +182,14 @@ function elevarAlCubo(num) {
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
   return Math.pow(num, 3);
+  // Opcional: num ** 3;
 
 }
 console.log(elevarAlCubo(3));
 console.log(elevarAlCubo(4.2));
 console.log(elevarAlCubo(-4));
-console.log(elevarAlCubo(0))
+console.log(elevarAlCubo(0));
+console.log(elevarAlCubo(2)**3);
 
 function elevar(num, exponent) {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
